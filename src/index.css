@@ -423,6 +423,7 @@ h2 {
     padding-top: 400px;
     display: flex;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .empty_wrapper span {
@@ -694,8 +695,15 @@ FOOTER
 
 .footer-page p {
     font-size: 1.8rem;
-    font-weight: 100;
+    /* font-weight: 100; */
+    line-height: 50px;
+    margin-bottom: 50px;
+}
 
+.footer-page li {
+    font-size: 1.8rem;
+    /* font-weight: 100; */
+    line-height: 50px;
 }
 
 

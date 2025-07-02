@@ -1,13 +1,11 @@
 export default function AboutPage() {
     return (
         <div className="footer-page">
-            <h2>About & How to use</h2>
+            <h2>About Rights Tracker</h2>
             <p>
-                Rights Tracker is a student-built project from the 2025 Boolean Final Course. Its only aim is to offer a clear, interactive snapshot of how LGBTQ+ rights evolve around the world.
+                Rights Tracker exists to make one thing easy: seeing, in seconds, how LGBTQ+ rights differ around the world. We track the big legal moments—when a country decriminalises, opens marriage, allows adoption, recognises gender identity, or guarantees trans-specific healthcare—and place them on a single timeline you can search, sort and compare.
 
-                Start by searching a country or filtering by continent; the list narrows in real time. Click a row to open the full timeline of laws. Need a quick comparison? Add two countries to the comparator and their milestones appear side-by-side. Mark ★ to store favourites—the star travels with you across the site.
-
-                Because legislation changes fast and enforcement can vary by region, treat these pages as a learning tool, not as legal counsel.
+                The site isn’t a legal service and it isn’t comprehensive commentary; it’s a public notebook that turns scattered legislation into a clear, shareable snapshot. Use it to spot progress, highlight gaps, and start informed conversations about what still needs to change.
             </p>
         </div>
     );

@@ -14,6 +14,7 @@ import AboutPage from './pages/AboutPage';
 import SourcesPage from './pages/SourcesPage';
 import HowToUsePage from './pages/HowToUsePage'
 import CreditsPage from './pages/CreditsPage'
+import ManifestoPage from './pages/ManifestoPage';
 
 
 
@@ -37,7 +38,7 @@ function App() {
                 <Route path="/sources" element={<SourcesPage />} />
                 <Route path="/howto" element={<HowToUsePage />} />
                 <Route path="/credits" element={<CreditsPage />} />
-
+                <Route path="/manifesto" element={<ManifestoPage />} />
               </Routes>
               <Footer />
             </BrowserRouter>

@@ -10,16 +10,16 @@ export default function Footer() {
                     <NavLink to="/" reloadDocument className="footer-link">
                         HOME
                     </NavLink>
-                    <NavLink to="/about" className="footer-link">
+                    <NavLink to="/about" reloadDocument className="footer-link">
                         ABOUT
                     </NavLink>
-                    <NavLink to='/howto' className="footer-link">
+                    <NavLink to='/howto' reloadDocument className="footer-link">
                         HOW TO USE
                     </NavLink>
-                    <NavLink to="/sources" className="footer-link">
+                    <NavLink to="/sources" reloadDocument className="footer-link">
                         SOURCES
                     </NavLink>
-                    <NavLink to='/credits' className="footer-link">
+                    <NavLink to='/credits' reloadDocument className="footer-link">
                         CREDITS
                     </NavLink>
                 </nav>

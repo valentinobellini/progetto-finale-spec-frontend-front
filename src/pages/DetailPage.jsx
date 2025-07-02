@@ -40,9 +40,7 @@ export default function DetailPage() {
                 <h1>{country.title}</h1>
 
                 <div className="detail-description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, sed atque aliquid quasi dicta veritatis molestias pariatur vitae odio recusandae? Sapiente voluptates temporibus id tempore praesentium iure magnam ut architecto.
-
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, sed atque aliquid quasi dicta veritatis molestias pariatur vitae odio recusandae? Sapiente voluptates temporibus id tempore praesentium iure magnam ut architecto.
+                    <p>{country.description}</p>
                 </div>
 
 
