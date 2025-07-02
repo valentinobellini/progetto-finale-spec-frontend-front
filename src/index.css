@@ -1,0 +1,731 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+
+
+/* SETUP */
+/* ---------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/* sticky footer */
+html,
+body,
+#root {
+    min-height: 100vh;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* background-color: #A48DD9; */
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* ---------------------- */
+
+
+
+
+
+/* HEADER */
+/* ---------------------- */
+.header {
+    position: fixed;
+    display: flex;
+    height: 180px;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    /* background-color: #ffffff; */
+    z-index: 100;
+    margin-bottom: 50px;
+}
+
+.home-link {
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-family: 'bevan';
+    color: #1F1F1F;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    color: #6750A4;
+}
+
+.logo {
+    width: 140px;
+    height: 140px;
+}
+
+.header-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    /* display: inline-flex; */
+    /* align-items: center; */
+    /* text-decoration: none;
+    transition: color 1s; */
+}
+
+.nav-link:hover {
+    color: #6750A4;
+}
+
+.nav-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+
+
+.list_page {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+/* INTRO text */
+/* ---------------------- */
+
+
+.text_wrapper {
+    padding: 180px 120px 60px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: 'Bevan';
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.number {
+    font-family: 'Bevan';
+    font-size: 2rem;
+    font-weight: 100;
+    /* line-height: 30px; */
+}
+
+.text {
+    font-size: 2rem;
+    font-weight: 100;
+    /* font-family: 'Bevan'; */
+    /* line-height: 30px; */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* SEARCHBAR, FILTER, SORT */
+/* ---------------------- */
+.controls_row {
+    /* opzionale wrapper, se lo userai */
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.search-input {
+    width: 600px;
+}
+
+
+/* stile comune */
+.search-input,
+.select-control {
+
+    height: 40px;
+    padding: 0 14px;
+    border: 1px solid #D0D0D0;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    color: #1F1F1F;
+}
+
+/* placeholder leggibile */
+.search-input::placeholder {
+    color: #000000;
+}
+
+/* focus state */
+.search-input:focus,
+.select-control:focus {
+    border-color: #6750A4;
+    box-shadow: 0 0 0 2px rgba(103, 80, 164, 0.15);
+}
+
+/* select: freccia custom (solo WebKit, fallback default altrove) */
+.select-control {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg fill='%231F1F1F' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px 16px;
+    padding-right: 38px;
+}
+
+/* hover */
+.search-input:hover,
+.select-control:hover {
+    border-color: #A48DD9;
+}
+
+/* disabled (se mai necessario) */
+.search-input:disabled,
+.select-control:disabled {
+    background: #F3F3F6;
+    color: #9A9A9A;
+    cursor: not-allowed;
+    border-style: dashed;
+}
+
+
+
+
+
+
+
+
+
+
+/* TABLE SECTION */
+/* ---------------------- */
+
+/* centra l’intero blocco */
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 100px auto;
+    /* border: 1px solid #000000; */
+}
+
+/* viewport con altezza fissa (~10 righe) */
+.table-scroll {
+    max-height: 520px;
+    /* regola se cambi font-size */
+
+    overflow-y: hidden;
+    overscroll-behavior: contain;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+.table-scroll:hover {
+    overflow-y: auto;
+}
+
+/* scrollbar invisibile (WebKit & Firefox) */
+.table-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* tabella */
+.country-table {
+    width: 100%;
+    /* o 100% se preferisci fluida */
+    /* border-collapse: collapse; */
+    table-layout: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* header “sticky” sempre visibile durante lo scroll */
+.country-table thead th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: #F3F3F6;
+    color: #1F1F1F;
+    font-weight: 600;
+    padding: 12px 8px;
+    text-align: left;
+}
+
+
+/* celle del corpo */
+.country-table tbody td {
+    /* padding: 10px 8px; */
+    /* border-bottom: 1px solid #E0E0E0; */
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+/* link al dettaglio */
+.country-cell a {
+    color: #1F1F1F;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.country-cell a:hover {
+    color: #6750A4;
+}
+
+/* colonna bottoni compatta */
+.actions-col {
+    width: 120px;
+    background-color: none;
+}
+
+.actions-col th {
+    border-radius: 50px;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   DETAILPAGE SECTION
+   =========================== */
+.detail-page {
+    min-height: 100vh;
+}
+
+.detail-card {
+    width: 80%;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding-top: 200px;
+    font-family: 'Roboto', sans-serif;
+    /* font di base */
+    color: #333333;
+}
+
+.detail-card h1 {
+    font-family: 'Bevan', cursive;
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.detail-card .detail-description {
+    font-size: 1.6rem;
+    font-weight: 100;
+    line-height: 1.6;
+    margin-bottom: 150px;
+    color: #555555;
+}
+
+.detail-card .detail-item {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.detail-card .detail-item span {
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-right: 8px;
+}
+
+
+
+.detail-wrapper {
+    display: flex;
+    justify-content: start;
+    gap: 150px;
+}
+
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===========================
+   FAVORITES SECTION
+   =========================== */
+.empty_wrapper {
+    padding-top: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.empty_wrapper span {
+    font-size: 40px;
+    font-family: 'Bevan';
+}
+
+.favorites_wrapper {
+    padding-top: 150px;
+    margin-bottom: 50px;
+    min-height: 100vh;
+    /* spazio sotto header fisso */
+}
+
+/* griglia masonry responsive */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* ===== CountryCard ===== */
+
+.country-card {
+    position: relative;
+    /* necessario per i bottoni assoluti */
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.10);
+    padding: 50px 40px 30px;
+}
+
+.country-card:hover {
+    /* transform: translateY(-8px); */
+    cursor: pointer;
+}
+
+/* -------- titolo -------- */
+.card-title {
+    font-family: 'Bevan', serif;
+    /* stesso font hero */
+    font-size: 2.6rem;
+    line-height: 1.15;
+    margin: 0 0 50px;
+}
+
+
+/* -------- bottoni sovrapposti -------- */
+.card-button {
+    position: absolute;
+    top: 45px;
+    right: 20px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+}
+
+.card-button .icon,
+.icon-button .icon {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-button:hover {
+    filter: brightness(1.2);
+}
+
+/* -------- dettagli testo -------- */
+.country-card p {
+    font-size: 1rem;
+    line-height: 2.5;
+}
+
+.country-card strong {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+/* COMPARE SECTION */
+/* ---------------------- */
+.empty-compare-page {
+    padding: 32px;
+    padding-top: 400px;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Bevan';
+    min-height: 100vh;
+
+}
+
+.compare-page {
+    padding: 32px;
+    padding-top: 150px;
+    text-align: center;
+    min-height: 100vh;
+
+}
+
+.compare-title {
+    margin-bottom: 24px;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: 'Bevan';
+}
+
+/* 2. Container “card” */
+.compare-container {
+    width: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+    background-color: #FFFFFF;
+    padding: 80px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+/* 3. Colonna etichette */
+.labels-col {
+    flex: 0 0 200px;
+    padding-top: 40px;
+    /* space under header row */
+}
+
+.label {
+    padding: 8px 0;
+    font-size: 0.875rem;
+    color: #6E6E6E;
+    /* on-surface-variant */
+    text-align: left;
+}
+
+/* 4. Colonne valori */
+.values-col {
+
+    width: 300px;
+}
+
+.country-header {
+    padding: 8px 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-bottom: 1px solid #E0E0E0;
+    /* outline */
+}
+
+.value {
+    padding: 8px 0;
+    font-size: 0.875rem;
+    color: #1F1F1F;
+    /* on-surface */
+    border-bottom: 1px solid #E0E0E0;
+    /* outline */
+}
+
+/* Rimuovo il bordo dall’ultima riga di ogni colonna */
+.values-col .value:last-child {
+    border-bottom: none;
+}
+
+/* 5. Pulsante “reset comparison” */
+.reset-button {
+    margin-top: 70px;
+    padding: 12px 32px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #FFFFFF;
+    /* on-primary */
+    background-color: #6750A4;
+    /* primary */
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.reset-button:hover {
+    background-color: #EADDFF;
+    /* primary-container */
+}
+
+
+
+
+
+
+
+
+
+/* 
+FOOTER
+------------------ */
+
+/* src/components/Footer.css */
+.footer {
+    height: 400px;
+    width: 100%;
+    background-color: #222222;
+
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+
+}
+
+.footer_wrapper {
+    height: 400px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 60px;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    /* spazio fra i link */
+    padding: 1.5rem 0;
+    /* padding verticale */
+
+}
+
+/* Stile base dei link */
+.footer-link {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+
+
+.footer-page {
+    padding: 180px 130px 60px;
+    width: 85%;
+    min-height: 100vh;
+    padding-top: 150px;
+    margin-bottom: 50px;
+
+    margin: auto;
+}
+
+.footer-page h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: 'Bevan';
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+
+.footer-page p {
+    font-size: 1.8rem;
+    font-weight: 100;
+
+}
+
+
+/* .text_wrapper {
+    padding: 120px 100px 60px;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 100;
+    font-family: 'Bevan';
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.number {
+    font-family: 'Bevan';
+    font-size: 2rem;
+    font-weight: 100;
+}
+
+.text {
+    font-size: 2rem;
+    font-weight: 100;
+
+} */
