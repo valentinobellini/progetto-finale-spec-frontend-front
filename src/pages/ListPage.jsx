@@ -3,16 +3,15 @@ import { useCountryData } from '../context/CountryDataContext';
 import SearchBar from '../components/SearchBar';
 import FilterSelect from '../components/FilterSelect';
 import SortControls from '../components/SortControls';
-
 import CountryTable from '../components/CountryTable';
-// import hero from '../assets/hero-img.png'
+
 
 export default function ListPage() {
+
     const {
         filteredList,
         loading,
         error,
-        searchTerm,
         setSearchTerm,
         categoryFilter,
         setCategoryFilter,
@@ -30,10 +29,6 @@ export default function ListPage() {
 
 
         <div className='list_page'>
-
-            {/* <div className="hero-image">
-                <img src={hero} alt="" />
-            </div> */}
 
             <div className='text_wrapper'>
                 <h2>“Equality in 2025: How Far, How Fast, How Fragile”</h2>
@@ -77,7 +72,7 @@ export default function ListPage() {
                 {/* tabella dei paesi: passa data via prop */}
                 {/* <CountryTable data={filteredList} /> */}
 
-                <CountryTable data={filteredList} />
+                <CountryTable filteredList={filteredList} />
 
             </div>
         </div>

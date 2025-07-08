@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import FavoriteButton from './FavoriteButton';
 import CompareButton from './CompareButton';
 
-export default function CountryTable({ data }) {
-    if (!data || data.length === 0) return <div className='empty-search'>No countries available</div>;
+export default function CountryTable({ filteredList }) {
+    if (!filteredList || filteredList.length === 0) return <div className='empty-search'>No countries available</div>;
 
     return (
         <div className="table-wrapper">
@@ -19,7 +19,7 @@ export default function CountryTable({ data }) {
                     </thead>
 
                     <tbody>
-                        {data.map(country => (
+                        {filteredList.map(country => (
                             <tr key={country.id}>
                                 <td className="country-cell">
                                     <Link to={`/countries/${country.id}`}>{country.title}</Link>
