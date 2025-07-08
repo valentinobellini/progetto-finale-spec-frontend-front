@@ -182,6 +182,13 @@ h2 {
 
 /* SEARCHBAR, FILTER, SORT */
 /* ---------------------- */
+.empty-search {
+    font-size: 30px;
+    font-family: 'Bevan';
+    text-align: center;
+    margin: 100px 0;
+}
+
 .controls_row {
     /* opzionale wrapper, se lo userai */
     display: flex;

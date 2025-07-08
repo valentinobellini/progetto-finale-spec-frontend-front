@@ -3,7 +3,7 @@ import FavoriteButton from './FavoriteButton';
 import CompareButton from './CompareButton';
 
 export default function CountryTable({ data }) {
-    if (!data || data.length === 0) return <div>No countries available</div>;
+    if (!data || data.length === 0) return <div className='empty-search'>No countries available</div>;
 
     return (
         <div className="table-wrapper">
