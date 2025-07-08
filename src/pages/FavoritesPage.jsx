@@ -4,7 +4,7 @@ import { useFavorites } from '../context/FavoriteContext';
 import CountryCard from '../components/CountryCard';
 
 export default function FavoritesPage() {
-    const { favorites, toggleFavorite } = useFavorites();
+    const { favorites } = useFavorites();
 
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -52,12 +52,16 @@ export default function FavoritesPage() {
                     <CountryCard
                         key={country.id}
                         country={country}
-                        onToggleFavorite={() => toggleFavorite(country.id)}
-                        onToggleCompare={() => toggleCompare(country.id)}
-
                     />
                 ))}
             </div>
         </div>
     );
 }
+
+
+
+
+
+
+

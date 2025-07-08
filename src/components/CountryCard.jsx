@@ -15,8 +15,7 @@ const randomRainbow = () =>
     rainbow[Math.floor(Math.random() * rainbow.length)];
 
 
-export default function CountryCard({ country, onToggleFavorite, ToggleCompare, }) {
-    if (!country) return null;     // safety guard
+export default function CountryCard({ country }) {
 
 
     const navigate = useNavigate();
@@ -25,18 +24,6 @@ export default function CountryCard({ country, onToggleFavorite, ToggleCompare, 
     function handleCardClick() {
         navigate(`/countries/${country.id}`);
     }
-
-    // // bottone “favorite”
-    // function handleFavClick(e) {
-    //     e.stopPropagation();
-    //     onToggleFavorite();
-    // }
-
-    // // bottone “compare”
-    // function handleCompareClick(e) {
-    //     e.stopPropagation();
-    //     onToggleCompare && onToggleCompare();
-    // }
 
 
     return (
@@ -59,11 +46,7 @@ export default function CountryCard({ country, onToggleFavorite, ToggleCompare, 
                     id={country.id} />
             </div>
 
-            {/* titolo */}
-            {/* <h2 className="card-title">{country.title}</h2> */}
 
-
-            {/* background card rainbow */}
             <h2
                 className="card-title"
 

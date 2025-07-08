@@ -1,8 +1,7 @@
 /* SearchBar.jsx */
-import { useState, useCallback } from 'react';
+import { useCallback } from 'react';
 
-export default function SearchBar({ value, setSearchTerm }) {
-    // const [searchQuery, setSearchQuery] = useState(value);
+export default function SearchBar({ setSearchTerm }) {
 
 
 

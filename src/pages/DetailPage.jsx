@@ -57,15 +57,24 @@ export default function DetailPage() {
                             <span>Marriage status:</span> {country.marriageStatus ?? 'n/a'}
                             {country.marriageYear ? ` (${country.marriageYear})` : ''}
                         </div>
+
+                    </div>
+
+                    <div className="c-wrapper">
+
                         <div className="detail-item">
                             <span>Adoption status:</span> {country.adoptionStatus ?? 'n/a'}
                             {country.adoptionYear ? ` (${country.adoptionYear})` : ''}
-                        </div></div>
+                        </div>
+                        <div className="detail-item">
+                            <span>Anti-discrimination:</span> {country.antiDiscriminationStatus ?? 'n/a'}
+                            {country.antiDiscriminationYear ? ` (${country.antiDiscriminationYear})` : ''}
+                        </div>
 
-                    <div className="r-wrapper"><div className="detail-item">
-                        <span>Anti-discrimination:</span> {country.antiDiscriminationStatus ?? 'n/a'}
-                        {country.antiDiscriminationYear ? ` (${country.antiDiscriminationYear})` : ''}
                     </div>
+
+                    <div className="r-wrapper">
+
                         <div className="detail-item">
                             <span>Gender recognition:</span> {country.genderRecognitionStatus ?? 'n/a'}
                             {country.genderRecognitionYear ? ` (${country.genderRecognitionYear})` : ''}
@@ -73,7 +82,10 @@ export default function DetailPage() {
                         <div className="detail-item">
                             <span>Trans healthcare:</span> {country.transHealthcareAccess ?? 'n/a'}
                             {country.transHealthcareYear ? ` (${country.transHealthcareYear})` : ''}
-                        </div></div></div>
+                        </div>
+
+                    </div>
+                </div>
 
 
                 <div className='button-wrapper'>

@@ -1,8 +1,6 @@
+import { IoIosStarOutline, IoIosStar } from 'react-icons/io';
 import { useFavorites } from '../context/FavoriteContext';
 
-// importa i due PNG (bianco/outline e viola/filled)
-import heartEmpty from '../assets/heart-empty.png';
-import heartFilled from '../assets/heart-filled.png';
 
 export default function FavoriteButton({ id }) {
     const { favorites, toggleFavorite } = useFavorites();
@@ -19,11 +17,10 @@ export default function FavoriteButton({ id }) {
             onClick={handleClick}
             aria-label={isFavorite ? 'Remove favorite' : 'Add to favorite'}
         >
-            <img
-                src={isFavorite ? heartFilled : heartEmpty}
-                alt=""
-                className="icon"
-            />
+            {isFavorite
+                ? <IoIosStar size={30} color="#a282fa" />      // stella piena gialla
+                : <IoIosStarOutline size={30} color="#333" />  // stella outline
+            }
         </button>
     );
 }

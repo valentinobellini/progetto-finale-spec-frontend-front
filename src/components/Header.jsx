@@ -1,9 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
-import heartEmpty from '../assets/heart-empty.png';
-import heartFilled from '../assets/heart-filled.png';
-import scaleEmpty from '../assets/scale-empty.png';
-import scaleFilled from '../assets/scale-filled.png';
+import { IoIosStarOutline, IoIosGitCompare } from 'react-icons/io';
 import logo from '../assets/logo2.png';
 
 export default function Header() {
@@ -19,28 +15,20 @@ export default function Header() {
                     <li>
                         <NavLink to="/favorites" className="nav-link">
                             {({ isActive }) => (
-                                <>
-                                    <img
-                                        src={isActive ? heartFilled : heartEmpty}
-                                        alt=""
-                                        className="nav-icon"
-                                    />
-                                    {/* <span>Preferiti</span> */}
-                                </>
+                                <IoIosStarOutline
+                                    size={40}
+                                    color={isActive ? '#6750A4' : '#1F1F1F'}
+                                />
                             )}
                         </NavLink>
                     </li>
                     <li>
                         <NavLink to="/compare" className="nav-link">
                             {({ isActive }) => (
-                                <>
-                                    <img
-                                        src={isActive ? scaleFilled : scaleEmpty}
-                                        alt=""
-                                        className="nav-icon"
-                                    />
-                                    {/* <span>Confronta</span> */}
-                                </>
+                                <IoIosGitCompare
+                                    size={40}
+                                    color={isActive ? '#6750A4' : '#1F1F1F'}
+                                />
                             )}
                         </NavLink>
                     </li>

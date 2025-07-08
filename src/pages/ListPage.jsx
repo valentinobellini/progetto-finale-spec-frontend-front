@@ -5,6 +5,7 @@ import FilterSelect from '../components/FilterSelect';
 import SortControls from '../components/SortControls';
 
 import CountryTable from '../components/CountryTable';
+// import hero from '../assets/hero-img.png'
 
 export default function ListPage() {
     const {
@@ -22,13 +23,18 @@ export default function ListPage() {
     if (loading) return <div>loading…</div>;
     if (error) return <div>error: {error.message}</div>;
 
+
+
+
     return (
 
 
-
-
-
         <div className='list_page'>
+
+            {/* <div className="hero-image">
+                <img src={hero} alt="" />
+            </div> */}
+
             <div className='text_wrapper'>
                 <h2>“Equality in 2025: How Far, How Fast, How Fragile”</h2>
                 <div className="text">
@@ -59,13 +65,13 @@ export default function ListPage() {
             <div className="list_section">
                 <div className="controls_row">
                     {/* search bar per titolo */}
-                    <SearchBar value={searchTerm} setSearchTerm={setSearchTerm} />
+                    <SearchBar setSearchTerm={setSearchTerm} />
 
                     {/* dropdown per filtro continente */}
-                    <FilterSelect value={categoryFilter} onChange={setCategoryFilter} />
+                    <FilterSelect categoryFilter={categoryFilter} setCategoryFilter={setCategoryFilter} />
 
                     {/* controlli di ordinamento */}
-                    <SortControls value={sortOrder} onChange={setSortOrder} />
+                    <SortControls sortOrder={sortOrder} setSortOrder={setSortOrder} />
                 </div>
 
                 {/* tabella dei paesi: passa data via prop */}

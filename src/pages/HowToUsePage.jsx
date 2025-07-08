@@ -8,9 +8,9 @@ export default function HowToUsePage() {
                 <br />
                 <br />
 
-                Save what matters. Tap the ★ icon to add a country to Favourites; the star toggles on/off and the list stays one click away in the top menu.
+                Save what matters. Tap the favorite icon to add a country to Favorites; the star toggles on/off and the list stays one click away in the top menu.
                 <br />
-                Line them up. Tap the scale ⚖ icon on two different rows to send them to the Comparator page. There you’ll see their milestones side-by-side—perfect for a quick “who offers what” check. Remove either country from the comparison bar to pick another.
+                Line them up. Tap the compare icon on two different rows to send them to the Comparator page. There you’ll see their milestones side-by-side—perfect for a quick “who offers what” check. Remove either country from the comparison bar to pick another.
                 <br />
                 <br />
 

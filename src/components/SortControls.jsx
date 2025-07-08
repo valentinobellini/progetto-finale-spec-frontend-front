@@ -1,9 +1,9 @@
 /* SortControls.jsx */
-export default function SortControls({ value, onChange }) {
+export default function SortControls({ sortOrder, setSortOrder }) {
     return (
         <select
-            value={value}
-            onChange={e => onChange(e.target.value)}
+            value={sortOrder}
+            onChange={e => setSortOrder(e.target.value)}
             className="select-control"
         >
             <option value="title-asc">title A-Z</option>

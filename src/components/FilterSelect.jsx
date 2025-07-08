@@ -1,9 +1,9 @@
 /* FilterSelect.jsx */
-export default function FilterSelect({ value, onChange }) {
+export default function FilterSelect({ categoryFilter, setCategoryFilter }) {
     return (
         <select
-            value={value}
-            onChange={e => onChange(e.target.value)}
+            value={categoryFilter}
+            onChange={e => setCategoryFilter(e.target.value)}
             className="select-control"
         >
             <option value="">all continents</option>

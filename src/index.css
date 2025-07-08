@@ -83,16 +83,8 @@ main {
     padding: 0;
 }
 
-.nav-link {
-    /* display: inline-flex; */
-    /* align-items: center; */
-    /* text-decoration: none;
-    transition: color 1s; */
-}
 
-.nav-link:hover {
-    color: #6750A4;
-}
+
 
 .nav-icon {
     width: 50px;
@@ -111,9 +103,32 @@ main {
 
 
 
+.hero-image {
+    /* usa la viewport width invece di % se sei dentro un container che ha max-width */
+    width: 100vw;
+    /* se vuoi un’altezza fissa: */
+    /* height: 400px; */
+    /* altrimenti ometti height per mantenerla proporzionale */
+    overflow: hidden;
+    margin: 200px 0;
+    /* come da tuo esempio */
+    /* compensa eventuale scroll orizzontale dovuto a 100vw in un layout con padding */
+    margin-left: calc(50% - 50vw);
+}
 
+/* l’immagine stessa, scala sempre per riempire il contenitore */
+.hero-image img {
+    display: block;
+    /* elimina lo spazio bianco sotto l’immagine */
+    width: 100%;
+    /* riempi tutta la larghezza del contenitore */
+    height: auto;
+    /* scala proporzionalmente l’altezza */
+    object-fit: cover;
+    /* se hai height fissa, riempie e ritaglia per coprire */
 
-
+    background-color: #ff0909;
+}
 
 
 
@@ -401,7 +416,7 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin: 50px 0;
+    padding: 100px;
 }
 
 
@@ -482,7 +497,11 @@ h2 {
     position: absolute;
     top: 45px;
     right: 20px;
+    display: flex;
+    gap: 15px;
 }
+
+
 
 .icon-button {
     background: none;
@@ -637,32 +656,28 @@ FOOTER
 
 /* src/components/Footer.css */
 .footer {
-    height: 400px;
+    height: 350px;
     width: 100%;
     background-color: #222222;
-
     position: relative;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-
 }
 
 .footer_wrapper {
-    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
     width: 100%;
-    position: fixed;
-    bottom: 0;
-    padding: 60px;
+    height: 350px;
+    padding: 100px;
+    box-sizing: border-box;
 }
 
 .footer-nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 2rem;
-    /* spazio fra i link */
-    padding: 1.5rem 0;
-    /* padding verticale */
-
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    row-gap: 3rem;
 }
 
 /* Stile base dei link */
@@ -710,33 +725,17 @@ FOOTER
 }
 
 
-/* .text_wrapper {
-    padding: 120px 100px 60px;
-    width: 85%;
+.social-icons {
+    padding-right: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    gap: 70px;
     align-items: center;
-    margin: auto;
-    margin-bottom: 30px;
+    color: white;
 }
 
-h2 {
-    font-size: 3rem;
-    font-weight: 100;
-    font-family: 'Bevan';
-    margin-top: 20px;
-    margin-bottom: 50px;
+
+.footer-center {
+    color: red;
+    border: 1px dashed red;
 }
-
-.number {
-    font-family: 'Bevan';
-    font-size: 2rem;
-    font-weight: 100;
-}
-
-.text {
-    font-size: 2rem;
-    font-weight: 100;
-
-} */

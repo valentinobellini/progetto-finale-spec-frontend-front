@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-
+import { IoLogoInstagram, IoLogoFacebook, IoLogoTwitter } from 'react-icons/io';
 
 export default function Footer() {
     return (
@@ -22,9 +22,22 @@ export default function Footer() {
                     <NavLink to='/credits' reloadDocument className="footer-link">
                         CREDITS
                     </NavLink>
+                    <NavLink to='/manifesto' reloadDocument className="footer-link">
+                        MANIFESTO
+                    </NavLink>
                 </nav>
 
+
+                <div className="social-icons">
+                    <IoLogoInstagram size={32} />
+                    <IoLogoFacebook size={32} />
+                    <IoLogoTwitter size={32} />
+                </div>
+
+
             </div>
+
+
         </div>
     );
 }
